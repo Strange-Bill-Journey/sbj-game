@@ -1,0 +1,3 @@
+This file has the authors and licenses for different files.
+TEMPLATE:
+- assets/img/file.png: Author, License (Multiple if there are multiple licenses for 1 file)
