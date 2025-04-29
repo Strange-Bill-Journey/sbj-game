@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=14 format=3 uid="uid://dm4mj0uoi2xjo"]
+[gd_resource type="TileSet" load_steps=15 format=3 uid="uid://dm4mj0uoi2xjo"]
 
 [ext_resource type="Texture2D" uid="uid://dw12ihey3qlm4" path="res://images/tiles/grass.png" id="1_1x5hd"]
 [ext_resource type="Texture2D" uid="uid://1lnbfb4855wx" path="res://images/tiles/wood.png" id="2_4ooou"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://xvq3tcurvrwd" path="res://scenes_and_scripts/characters/walking_spike.tscn" id="7_pwi8b"]
 [ext_resource type="Texture2D" uid="uid://ckqobatsr425h" path="res://images/tiles/castle.png" id="8_8u12r"]
 [ext_resource type="PackedScene" uid="uid://bwd5yrhf3aq2h" path="res://scenes_and_scripts/characters/flying_spike.tscn" id="8_na100"]
+[ext_resource type="PackedScene" uid="uid://y2x1wm7nturv" path="res://scenes_and_scripts/characters/bubble.tscn" id="9_yvu74"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6dnt"]
 texture = ExtResource("1_1x5hd")
@@ -35,6 +36,7 @@ scenes/3/scene = ExtResource("5_wugt3")
 scenes/4/scene = ExtResource("6_b1jaf")
 scenes/5/scene = ExtResource("7_pwi8b")
 scenes/6/scene = ExtResource("8_na100")
+scenes/7/scene = ExtResource("9_yvu74")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na100"]
 texture = ExtResource("8_8u12r")

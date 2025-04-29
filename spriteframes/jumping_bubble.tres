@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://ch1a44srgpgv"]
+
+[ext_resource type="Texture2D" uid="uid://dqvl6v6d4fp7o" path="res://images/characters/enemies/jumping_bubble.png" id="1_nhvx6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_neh7s"]
+atlas = ExtResource("1_nhvx6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph1du"]
+atlas = ExtResource("1_nhvx6")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_neh7s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph1du")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
