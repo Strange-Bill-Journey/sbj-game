@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cspgfyx7krr4p"]
+
+[ext_resource type="FontFile" uid="uid://cw2p8c0m08kg6" path="res://fonts/C64_Pro-STYLE.otf" id="1_ory46"]
+[ext_resource type="Script" uid="uid://byd6q0dtnscog" path="res://scenes_and_scripts/circle_ui.gd" id="1_ywmbr"]
+
+[node name="CircleUI" type="CanvasLayer"]
+script = ExtResource("1_ywmbr")
+
+[node name="CircleLabel" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 226.0
+offset_bottom = 25.0
+theme_override_fonts/font = ExtResource("1_ory46")
+theme_override_font_sizes/font_size = 8

@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@export var scene = "res://scenes_and_scripts/levels/world1/familiar_path.tscn"
+
 func _ready() -> void:
 	$EndScreen.visible = false
 
@@ -8,4 +10,5 @@ func _on_area_2d_body_entered(body) -> void:
 		get_tree().paused = true
 		$EndScreen.visible = true
 		Global.level_finished = true
-		Level.finish_level()
+		await get_tree().create_timer(3).timeout
+		get_tree().change_scene_to_file(scene)
