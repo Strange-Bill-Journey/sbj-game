@@ -32,7 +32,7 @@ tile_set = ExtResource("3_a474c")
 [node name="CharacterBody2D" parent="." instance=ExtResource("4_ks38r")]
 position = Vector2(16, 144)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="levelmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_5usfv")
 autoplay = true
 

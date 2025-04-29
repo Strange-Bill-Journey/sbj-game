@@ -8,6 +8,7 @@
 size = Vector2(4, 524)
 
 [node name="EndSign" type="Sprite2D"]
+process_mode = 3
 texture = ExtResource("1_gejsy")
 centered = false
 script = ExtResource("2_qpo5l")
@@ -19,6 +20,7 @@ position = Vector2(12, -246)
 shape = SubResource("RectangleShape2D_gejsy")
 
 [node name="EndScreen" type="CanvasLayer" parent="."]
+process_mode = 3
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="EndScreen"]

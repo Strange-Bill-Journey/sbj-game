@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwd5yrhf3aq2h"]
+
+[ext_resource type="Script" uid="uid://bi17xmjgru65" path="res://scenes_and_scripts/characters/flying_spike.gd" id="2_7xl0e"]
+[ext_resource type="Texture2D" uid="uid://qdk4io6ukh65" path="res://images/characters/enemies/spike.png" id="2_ws6fa"]
+
+[node name="FlyingSpike" type="Sprite2D"]
+texture = ExtResource("2_ws6fa")
+script = ExtResource("2_7xl0e")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0.200001, -7.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-8, 0)
+polygon = PackedVector2Array(7.8, -0.5, 15.8, 15.5, -0.200001, 15.5)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

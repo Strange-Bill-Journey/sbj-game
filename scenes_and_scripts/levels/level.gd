@@ -15,5 +15,5 @@ func finish_level():
 	if Global.level_finished == true:
 		Global.level_finished = false
 		Global.total_circles = 0
-		await get_tree().create_timer(1).timeout
+		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_file(scene)
