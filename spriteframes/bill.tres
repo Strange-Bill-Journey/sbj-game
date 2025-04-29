@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://diul7p86go153"]
+
+[ext_resource type="Texture2D" uid="uid://da0csbsjr38m4" path="res://images/characters/bill.png" id="1_s5gos"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft8x0"]
+atlas = ExtResource("1_s5gos")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewr0n"]
+atlas = ExtResource("1_s5gos")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_778f1"]
+atlas = ExtResource("1_s5gos")
+region = Rect2(16, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft8x0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewr0n")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_778f1")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]

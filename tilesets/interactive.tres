@@ -1,0 +1,50 @@
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://dm4mj0uoi2xjo"]
+
+[ext_resource type="Texture2D" uid="uid://dw12ihey3qlm4" path="res://images/tiles/grass.png" id="1_1x5hd"]
+[ext_resource type="Texture2D" uid="uid://1lnbfb4855wx" path="res://images/tiles/wood.png" id="2_4ooou"]
+[ext_resource type="PackedScene" uid="uid://cfqdn4rr1025e" path="res://scenes_and_scripts/objects/gold_circle.tscn" id="3_r4g48"]
+[ext_resource type="PackedScene" uid="uid://8hccuflysv7b" path="res://scenes_and_scripts/objects/spike.tscn" id="4_75jvb"]
+[ext_resource type="PackedScene" uid="uid://o3iagflmnm27" path="res://scenes_and_scripts/objects/crumbling_bridge.tscn" id="5_wugt3"]
+[ext_resource type="PackedScene" uid="uid://bmnb7qddmctq0" path="res://scenes_and_scripts/objects/bonus_block.tscn" id="6_b1jaf"]
+[ext_resource type="PackedScene" uid="uid://xvq3tcurvrwd" path="res://scenes_and_scripts/characters/walking_spike.tscn" id="7_pwi8b"]
+[ext_resource type="Texture2D" uid="uid://ckqobatsr425h" path="res://images/tiles/castle.png" id="8_8u12r"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6dnt"]
+texture = ExtResource("1_1x5hd")
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:0/0/terrains_peering_bit/bottom_side = 0
+0:1/0 = 0
+0:1/0/terrain_set = 0
+0:1/0/terrain = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0/terrains_peering_bit/top_side = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r4g48"]
+texture = ExtResource("2_4ooou")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_75jvb"]
+scenes/1/scene = ExtResource("3_r4g48")
+scenes/2/scene = ExtResource("4_75jvb")
+scenes/3/scene = ExtResource("5_wugt3")
+scenes/4/scene = ExtResource("6_b1jaf")
+scenes/5/scene = ExtResource("7_pwi8b")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na100"]
+texture = ExtResource("8_8u12r")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[resource]
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "grass"
+terrain_set_0/terrain_0/color = Color(1.08294e-07, 0.469393, 0.0742388, 1)
+sources/0 = SubResource("TileSetAtlasSource_g6dnt")
+sources/1 = SubResource("TileSetAtlasSource_r4g48")
+sources/2 = SubResource("TileSetScenesCollectionSource_75jvb")
+sources/3 = SubResource("TileSetAtlasSource_na100")

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://o3iagflmnm27"]
+
+[ext_resource type="Script" uid="uid://xl2ruh8j8g7k" path="res://scenes_and_scripts/objects/crumbling_bridge.gd" id="1_6itok"]
+[ext_resource type="SpriteFrames" uid="uid://dswbv3vijihby" path="res://spriteframes/crumbling_bridge.tres" id="1_dybkk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dybkk"]
+size = Vector2(16, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2qnb"]
+size = Vector2(16.1572, 0.5)
+
+[node name="CrumblingBridge" type="StaticBody2D"]
+script = ExtResource("1_6itok")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_dybkk")
+animation = &"crumbling"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_dybkk")
+one_way_collision_margin = 0.0
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(-0.866486, 0.972719)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -8.47437)
+shape = SubResource("RectangleShape2D_m2qnb")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

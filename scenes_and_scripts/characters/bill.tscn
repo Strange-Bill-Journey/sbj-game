@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwhij74px8aqb"]
+
+[ext_resource type="SpriteFrames" uid="uid://diul7p86go153" path="res://spriteframes/bill.tres" id="1_audlv"]
+[ext_resource type="Script" uid="uid://bjcprr6ttwsoi" path="res://scenes_and_scripts/characters/bill.gd" id="1_dtu6r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_audlv"]
+size = Vector2(14, 15)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_dtu6r")
+
+[node name="Image" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+sprite_frames = ExtResource("1_audlv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 8.5)
+shape = SubResource("RectangleShape2D_audlv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_bottom = 0

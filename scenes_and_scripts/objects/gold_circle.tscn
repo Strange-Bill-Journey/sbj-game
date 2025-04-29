@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfqdn4rr1025e"]
+
+[ext_resource type="SpriteFrames" uid="uid://cb1g3qv1yfeqx" path="res://spriteframes/gold_circle.tres" id="1_w3qh3"]
+[ext_resource type="Script" uid="uid://bm4ojdmp8673x" path="res://scenes_and_scripts/objects/gold_circle.gd" id="2_gvxyn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w3qh3"]
+radius = 9.75559
+
+[node name="Gold Circle" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_w3qh3")
+frame_progress = 0.286374
+script = ExtResource("2_gvxyn")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.717537, 0.720461)
+shape = SubResource("CircleShape2D_w3qh3")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

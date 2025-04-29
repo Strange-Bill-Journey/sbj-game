@@ -1,0 +1,58 @@
+[gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://dswbv3vijihby"]
+
+[ext_resource type="Texture2D" uid="uid://cyl5u5e06awwc" path="res://images/objects/crumbling_bridge.png" id="1_qtwe6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t0c8"]
+atlas = ExtResource("1_qtwe6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ma23"]
+atlas = ExtResource("1_qtwe6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj6tk"]
+atlas = ExtResource("1_qtwe6")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0yy5"]
+atlas = ExtResource("1_qtwe6")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mltsp"]
+atlas = ExtResource("1_qtwe6")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37iac"]
+atlas = ExtResource("1_qtwe6")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t0c8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ma23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aj6tk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g0yy5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mltsp")
+}],
+"loop": true,
+"name": &"crumbling",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37iac")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
