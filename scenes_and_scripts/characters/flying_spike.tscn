@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwd5yrhf3aq2h"]
+[gd_scene load_steps=5 format=3 uid="uid://bwd5yrhf3aq2h"]
 
 [ext_resource type="Script" uid="uid://bi17xmjgru65" path="res://scenes_and_scripts/characters/flying_spike.gd" id="2_7xl0e"]
 [ext_resource type="Texture2D" uid="uid://qdk4io6ukh65" path="res://images/characters/enemies/spike.png" id="2_ws6fa"]
+[ext_resource type="FontFile" uid="uid://cw2p8c0m08kg6" path="res://fonts/C64_Pro-STYLE.otf" id="3_ws6fa"]
+[ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="4_p8dc0"]
 
 [node name="FlyingSpike" type="Sprite2D"]
 texture = ExtResource("2_ws6fa")
@@ -13,5 +15,27 @@ position = Vector2(0.200001, -7.5)
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2(-8, 0)
 polygon = PackedVector2Array(7.8, -0.5, 15.8, 15.5, -0.200001, 15.5)
+
+[node name="EndScreen" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="EndScreen"]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 330.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EndScreen"]
+offset_right = 320.0
+offset_bottom = 200.0
+theme_override_fonts/normal_font = ExtResource("3_ws6fa")
+theme_override_font_sizes/normal_font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_p8dc0")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

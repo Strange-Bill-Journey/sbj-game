@@ -22,6 +22,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_select") and is_on_floor():
 		velocity.y = jump_force
+		$jump.play()
 	# there's a better way to do this i hate looking at it.
 	if Input.is_action_just_released("ui_select") and velocity.y < 0:
 		velocity.y *= decelerate_on_jump_release

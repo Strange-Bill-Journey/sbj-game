@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://8hccuflysv7b"]
+[gd_scene load_steps=5 format=3 uid="uid://8hccuflysv7b"]
 
 [ext_resource type="Script" uid="uid://djdifr8i0b1t2" path="res://scenes_and_scripts/objects/spike.gd" id="1_xep5c"]
 [ext_resource type="Texture2D" uid="uid://cjroisgridout" path="res://images/objects/spike.png" id="2_c4p61"]
+[ext_resource type="FontFile" uid="uid://cw2p8c0m08kg6" path="res://fonts/C64_Pro-STYLE.otf" id="3_c4p61"]
+[ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="4_yxlp4"]
 
 [node name="Spike" type="Node2D"]
 script = ExtResource("1_xep5c")
@@ -15,5 +17,27 @@ position = Vector2(8, 8)
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2(-16, -16)
 polygon = PackedVector2Array(8, 0, 16, 16, 0, 16)
+
+[node name="EndScreen" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="EndScreen"]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 330.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EndScreen"]
+offset_right = 320.0
+offset_bottom = 200.0
+theme_override_fonts/normal_font = ExtResource("3_c4p61")
+theme_override_font_sizes/normal_font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yxlp4")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

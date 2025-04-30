@@ -9,6 +9,7 @@ func _on_area_2d_body_entered(body) -> void:
 	if body.is_in_group("Player"):
 		$Area2D.set_deferred("monitorable", false)
 		$Area2D.set_deferred("monitoring", false)
+		$coin.play()
 		move_up()
 		await get_tree().create_timer(0.1).timeout
 		move_down()
