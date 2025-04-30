@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dr8e4fht0m3tm" path="res://scenes_and_scripts/levels/world1/level4.gd" id="1_mu6i3"]
 [ext_resource type="TileSet" uid="uid://dm4mj0uoi2xjo" path="res://tilesets/interactive.tres" id="3_nm25k"]
+[ext_resource type="AudioStream" uid="uid://gfldtbc3breb" path="res://music/cave.ogg" id="4_epyjn"]
 [ext_resource type="PackedScene" uid="uid://bwhij74px8aqb" path="res://scenes_and_scripts/characters/bill.tscn" id="4_h3t71"]
-[ext_resource type="AudioStream" uid="uid://c75lxtv347r52" path="res://music/grassland.ogg" id="5_yphbj"]
 [ext_resource type="PackedScene" uid="uid://3kxmr6xlkxlo" path="res://scenes_and_scripts/objects/end_sign.tscn" id="6_5a84m"]
 [ext_resource type="PackedScene" uid="uid://lnlhgbapvy22" path="res://scenes_and_scripts/instant_death.tscn" id="7_epyjn"]
 [ext_resource type="PackedScene" uid="uid://cspgfyx7krr4p" path="res://scenes_and_scripts/circle_ui.tscn" id="7_i5fyo"]
@@ -30,7 +30,7 @@ tile_set = ExtResource("3_nm25k")
 position = Vector2(16, 80)
 
 [node name="levelmusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_yphbj")
+stream = ExtResource("4_epyjn")
 autoplay = true
 
 [node name="Circles" type="Node" parent="."]
