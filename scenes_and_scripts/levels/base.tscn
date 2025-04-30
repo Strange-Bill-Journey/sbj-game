@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://7dp57qyjmugy"]
+[gd_scene load_steps=8 format=3 uid="uid://7dp57qyjmugy"]
 
 [ext_resource type="Script" uid="uid://dq1ugvwhrpnmj" path="res://scenes_and_scripts/levels/world1/level1.gd" id="1_mx2ye"]
 [ext_resource type="Texture2D" uid="uid://bknrveujxydp2" path="res://images/background/clouds.png" id="2_t5ylp"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bwhij74px8aqb" path="res://scenes_and_scripts/characters/bill.tscn" id="4_bpehc"]
 [ext_resource type="AudioStream" uid="uid://c75lxtv347r52" path="res://music/grassland.ogg" id="5_lu4x6"]
 [ext_resource type="PackedScene" uid="uid://3kxmr6xlkxlo" path="res://scenes_and_scripts/objects/end_sign.tscn" id="6_yc43y"]
+[ext_resource type="PackedScene" uid="uid://cspgfyx7krr4p" path="res://scenes_and_scripts/circle_ui.tscn" id="7_t5ylp"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mx2ye")
@@ -25,6 +26,9 @@ motion_mirroring = Vector2(440, 0)
 position = Vector2(224, 96)
 texture = ExtResource("2_t5ylp")
 
+[node name="TileMapLayerBackground" type="TileMapLayer" parent="."]
+tile_set = ExtResource("3_31x0f")
+
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = ExtResource("3_31x0f")
 
@@ -39,3 +43,5 @@ autoplay = true
 
 [node name="Sprite2D" parent="." instance=ExtResource("6_yc43y")]
 position = Vector2(3464, 144)
+
+[node name="CircleUI" parent="." instance=ExtResource("7_t5ylp")]

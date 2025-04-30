@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://b85rr461ocm6y"]
+
+[ext_resource type="Texture2D" uid="uid://10jbm3v0w46k" path="res://images/tiles/lava.png" id="1_7w76g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oej4m"]
+atlas = ExtResource("1_7w76g")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxxm2"]
+atlas = ExtResource("1_7w76g")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4rr7"]
+atlas = ExtResource("1_7w76g")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ybi2h"]
+atlas = ExtResource("1_7w76g")
+region = Rect2(16, 16, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oej4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxxm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4rr7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ybi2h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
