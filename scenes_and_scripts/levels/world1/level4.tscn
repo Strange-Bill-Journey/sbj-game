@@ -40,7 +40,7 @@ autoplay = true
 
 [node name="Sprite2D" parent="." instance=ExtResource("6_isn4r")]
 position = Vector2(3000, 144)
-scene = "res://scenes_and_scripts/levels/world1/test_level.tscn"
+scene = "res://scenes_and_scripts/levels/world2/level1.tscn"
 
 [node name="CircleUI" parent="." instance=ExtResource("7_40e2s")]
 
