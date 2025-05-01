@@ -12,5 +12,5 @@ You'll need to download Godot 4.4.1, as this was made using that version of Godo
 
 Then you'll need to open the source code's project.godot file in Godot.
 
-## Credits (Wiki page soon!):
-The font is https://style64.org/c64-truetype
+## Credits
+https://github.com/Strange-Bill-Journey/sbj-game/wiki/Credits
