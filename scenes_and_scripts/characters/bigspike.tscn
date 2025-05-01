@@ -6,8 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="4_r0p2k"]
 
 [node name="BigSpike" type="Sprite2D"]
-position = Vector2(-4.76837e-07, -4.76837e-07)
-scale = Vector2(3, 3)
+scale = Vector2(2.5, 2.5)
 texture = ExtResource("1_ed8oh")
 script = ExtResource("2_ed8oh")
 
@@ -16,7 +15,7 @@ position = Vector2(0.200001, -7.5)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2(-8.2, -0.500001)
-polygon = PackedVector2Array(7.8, -0.5, 15.8, 15.5, -0.200001, 15.5)
+polygon = PackedVector2Array(8, 0.8, 15.2, 15.2, 0.799999, 15.2)
 
 [node name="EndScreen" type="CanvasLayer" parent="."]
 process_mode = 3

@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Strange Bill Journey"
 config/description="Platformer game."
-config/version="0.0.1.0"
+config/version="0.0.2"
 run/main_scene="uid://dlkv1jffrmbbu"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="uid://c4gothjy87n81"
@@ -23,9 +23,10 @@ Global="*res://scenes_and_scripts/global.gd"
 
 [display]
 
-window/size/viewport_width=320
-window/size/viewport_height=200
+window/size/viewport_width=640
+window/size/viewport_height=400
 window/size/resizable=false
+window/stretch/scale=2.0
 
 [input]
 

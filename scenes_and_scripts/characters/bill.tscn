@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://ccis7qdhkgisy" path="res://sounds/jump.ogg" id="3_mrw0v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_audlv"]
-size = Vector2(14, 15)
+size = Vector2(12, 14)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_dtu6r")
@@ -15,7 +15,7 @@ position = Vector2(8, 8)
 sprite_frames = ExtResource("1_audlv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(8, 8.5)
+position = Vector2(8, 9)
 shape = SubResource("RectangleShape2D_audlv")
 
 [node name="Camera2D" type="Camera2D" parent="."]

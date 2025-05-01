@@ -30,7 +30,7 @@ tile_map_data = PackedByteArray("AAAAAAoAAwAAAAAAAAAAAAsAAwAAAAAAAAAAAAwAAwAAAAA
 tile_set = ExtResource("2_23cis")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_r1861")]
-position = Vector2(16, 144)
+position = Vector2(2480, 48)
 
 [node name="levelmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_y2o5d")
@@ -55,6 +55,6 @@ position = Vector2(1856, 232)
 scale = Vector2(231.823, 1)
 
 [node name="BigSpike" parent="." instance=ExtResource("8_jelto")]
-position = Vector2(2912, 136)
+position = Vector2(2912, 140)
 
 [connection signal="body_entered" from="MusicChange" to="." method="_on_music_change_body_entered"]
