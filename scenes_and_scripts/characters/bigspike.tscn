@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfrf4elj7sf1c"]
+
+[ext_resource type="Texture2D" uid="uid://qdk4io6ukh65" path="res://images/characters/enemies/spike.png" id="1_ed8oh"]
+[ext_resource type="Script" uid="uid://q4t27tiw8ajc" path="res://scenes_and_scripts/characters/big_spike.gd" id="2_ed8oh"]
+[ext_resource type="FontFile" uid="uid://cw2p8c0m08kg6" path="res://fonts/C64_Pro-STYLE.otf" id="3_qru3i"]
+[ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="4_r0p2k"]
+
+[node name="BigSpike" type="Sprite2D"]
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(3, 3)
+texture = ExtResource("1_ed8oh")
+script = ExtResource("2_ed8oh")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0.200001, -7.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-8.2, -0.500001)
+polygon = PackedVector2Array(7.8, -0.5, 15.8, 15.5, -0.200001, 15.5)
+
+[node name="EndScreen" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="EndScreen"]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 330.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="EndScreen"]
+offset_right = 320.0
+offset_bottom = 200.0
+theme_override_fonts/normal_font = ExtResource("3_qru3i")
+theme_override_font_sizes/normal_font_size = 16
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="fall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r0p2k")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
