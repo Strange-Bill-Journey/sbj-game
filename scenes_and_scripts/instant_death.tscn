@@ -5,12 +5,13 @@
 [ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="3_tidkh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ht8d1"]
-size = Vector2(16, 16)
+size = Vector2(3842, 16)
 
 [node name="InstantDeath" type="Area2D"]
 script = ExtResource("1_1s0vd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1913, 0)
 shape = SubResource("RectangleShape2D_ht8d1")
 
 [node name="EndScreen" type="CanvasLayer" parent="."]

@@ -51,5 +51,5 @@ scene = "res://scenes_and_scripts/levels/world1/level3.tscn"
 [node name="CircleUI" parent="." instance=ExtResource("7_4lu4e")]
 
 [node name="InstantDeath" parent="." instance=ExtResource("8_33kou")]
-position = Vector2(1856, 248)
+position = Vector2(1856, 232)
 scale = Vector2(231.823, 1)

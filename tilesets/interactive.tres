@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=22 format=3 uid="uid://dm4mj0uoi2xjo"]
+[gd_resource type="TileSet" load_steps=24 format=3 uid="uid://dm4mj0uoi2xjo"]
 
 [ext_resource type="Texture2D" uid="uid://dw12ihey3qlm4" path="res://images/tiles/grass.png" id="1_1x5hd"]
 [ext_resource type="Texture2D" uid="uid://1lnbfb4855wx" path="res://images/tiles/wood.png" id="2_4ooou"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://es4lq1hedudy" path="res://images/tiles/rock.png" id="11_61jb6"]
 [ext_resource type="Texture2D" uid="uid://cmovk0g1qvce4" path="res://images/tiles/rock2.png" id="12_ls2up"]
 [ext_resource type="Texture2D" uid="uid://ba1xtuldfb11t" path="res://images/tiles/lava_bottom.png" id="14_85evt"]
+[ext_resource type="Texture2D" uid="uid://jwpiwq52lfbd" path="res://images/tiles/pole.png" id="15_85evt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6dnt"]
 texture = ExtResource("1_1x5hd")
@@ -62,6 +63,11 @@ texture = ExtResource("12_ls2up")
 texture = ExtResource("14_85evt")
 0:0/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcolo"]
+texture = ExtResource("15_85evt")
+texture_region_size = Vector2i(8, 16)
+0:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
@@ -74,3 +80,4 @@ sources/3 = SubResource("TileSetAtlasSource_na100")
 sources/4 = SubResource("TileSetAtlasSource_ls2up")
 sources/5 = SubResource("TileSetAtlasSource_vbme7")
 sources/6 = SubResource("TileSetAtlasSource_25268")
+sources/7 = SubResource("TileSetAtlasSource_vcolo")

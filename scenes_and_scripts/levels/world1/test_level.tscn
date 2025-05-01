@@ -50,5 +50,5 @@ position = Vector2(3464, 144)
 [node name="CircleUI" parent="." instance=ExtResource("7_grk4q")]
 
 [node name="InstantDeath" parent="." instance=ExtResource("8_a474c")]
-position = Vector2(1856, 248)
+position = Vector2(1856, 232)
 scale = Vector2(231.823, 1)

@@ -54,7 +54,7 @@ position = Vector2(2584, 56)
 shape = SubResource("RectangleShape2D_gxsq4")
 
 [node name="InstantDeath" parent="." instance=ExtResource("8_jdk3m")]
-position = Vector2(1856, 248)
+position = Vector2(1856, 232)
 scale = Vector2(231.823, 1)
 
 [connection signal="body_entered" from="MusicChange" to="." method="_on_music_change_body_entered"]

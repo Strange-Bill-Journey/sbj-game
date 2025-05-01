@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dmtnw38gy7pct"]
+[gd_scene load_steps=10 format=4 uid="uid://dmtnw38gy7pct"]
 
 [ext_resource type="Script" uid="uid://dq1ugvwhrpnmj" path="res://scenes_and_scripts/levels/world1/level1.gd" id="1_2a3ex"]
 [ext_resource type="Texture2D" uid="uid://bknrveujxydp2" path="res://images/background/clouds.png" id="2_q2rdw"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://3kxmr6xlkxlo" path="res://scenes_and_scripts/objects/end_sign.tscn" id="6_yqct3"]
 [ext_resource type="PackedScene" uid="uid://cspgfyx7krr4p" path="res://scenes_and_scripts/circle_ui.tscn" id="7_vssa7"]
 [ext_resource type="PackedScene" uid="uid://y2x1wm7nturv" path="res://scenes_and_scripts/characters/bubble.tscn" id="8_7dot8"]
+[ext_resource type="PackedScene" uid="uid://lnlhgbapvy22" path="res://scenes_and_scripts/instant_death.tscn" id="9_q2rdw"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_2a3ex")
@@ -28,6 +29,7 @@ position = Vector2(224, 96)
 texture = ExtResource("2_q2rdw")
 
 [node name="TileMapLayerBackground" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAEAAkABAAAAAAAAAAFAAkABAABAAAAAAAyAAkABAAAAAAAAAAzAAkABAABAAAAAABTAAYABAAAAAAAAABUAAYABAABAAAAAACHAAkABAAAAAAAAACIAAkABAABAAAAAACsAAUABAAAAAAAAACtAAUABAABAAAAAADeAAkABAAAAAAAAADfAAkABAABAAAAAAA=")
 tile_set = ExtResource("3_51g0i")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -54,3 +56,7 @@ position = Vector2(1296, 72)
 
 [node name="Bubble2" parent="." instance=ExtResource("8_7dot8")]
 position = Vector2(2608, 104)
+
+[node name="InstantDeath" parent="." instance=ExtResource("9_q2rdw")]
+position = Vector2(1856, 232)
+scale = Vector2(231.823, 1)
