@@ -2,7 +2,11 @@
 A platformer inspired by Super Mario Bros and The Great Giana Sisters. It's made in Godot.
 
 ## Story
-Bill goes for a small adventure to get some coins that just appeared one day.
+One day, in a village full of squares that look the same, a fire started! 
+
+However, this fire was done using magic, and no one in the village knew how to do magic, and when a square named Bill saw it, he realized that this was done by a creature named Doz! 
+
+So Bill decides to go for a strange journey to stop Doz!
 
 ## Controls
 Arrow keys are used to move, space is used to jump.
