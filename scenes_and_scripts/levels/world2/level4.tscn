@@ -30,7 +30,7 @@ tile_map_data = PackedByteArray("AAAAAAoAAwAAAAAAAAAAAAsAAwAAAAAAAAAAAAwAAwAAAAA
 tile_set = ExtResource("2_23cis")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_r1861")]
-position = Vector2(2480, 48)
+position = Vector2(16, 144)
 
 [node name="levelmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_y2o5d")
