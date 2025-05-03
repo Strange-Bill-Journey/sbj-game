@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=26 format=3 uid="uid://dm4mj0uoi2xjo"]
+[gd_resource type="TileSet" load_steps=29 format=3 uid="uid://dm4mj0uoi2xjo"]
 
 [ext_resource type="Texture2D" uid="uid://dw12ihey3qlm4" path="res://images/tiles/grass.png" id="1_1x5hd"]
 [ext_resource type="Texture2D" uid="uid://1lnbfb4855wx" path="res://images/tiles/wood.png" id="2_4ooou"]
@@ -12,10 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://y2x1wm7nturv" path="res://scenes_and_scripts/characters/bubble.tscn" id="9_yvu74"]
 [ext_resource type="PackedScene" uid="uid://vuin0bt8w58q" path="res://scenes_and_scripts/tiles/lava.tscn" id="10_st0y0"]
 [ext_resource type="Texture2D" uid="uid://es4lq1hedudy" path="res://images/tiles/rock.png" id="11_61jb6"]
+[ext_resource type="PackedScene" uid="uid://cxov2bd2qrog8" path="res://scenes_and_scripts/tiles/water.tscn" id="11_yn3mf"]
 [ext_resource type="Texture2D" uid="uid://cmovk0g1qvce4" path="res://images/tiles/rock2.png" id="12_ls2up"]
 [ext_resource type="Texture2D" uid="uid://ba1xtuldfb11t" path="res://images/tiles/lava_bottom.png" id="14_85evt"]
 [ext_resource type="Texture2D" uid="uid://jwpiwq52lfbd" path="res://images/tiles/pole.png" id="15_85evt"]
 [ext_resource type="Texture2D" uid="uid://csvulg5tqdyki" path="res://images/tiles/snow.png" id="16_25268"]
+[ext_resource type="Texture2D" uid="uid://cyl1k0uiemykf" path="res://images/tiles/water_bottom.png" id="18_nderx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g6dnt"]
 texture = ExtResource("1_1x5hd")
@@ -44,6 +46,7 @@ scenes/5/scene = ExtResource("7_pwi8b")
 scenes/6/scene = ExtResource("8_na100")
 scenes/7/scene = ExtResource("9_yvu74")
 scenes/8/scene = ExtResource("10_st0y0")
+scenes/9/scene = ExtResource("11_yn3mf")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_na100"]
 texture = ExtResource("8_8u12r")
@@ -82,6 +85,10 @@ texture = ExtResource("16_25268")
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0/terrains_peering_bit/top_side = 1
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x1eh0"]
+texture = ExtResource("18_nderx")
+0:0/0 = 0
+
 [resource]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 0
@@ -98,3 +105,4 @@ sources/5 = SubResource("TileSetAtlasSource_vbme7")
 sources/6 = SubResource("TileSetAtlasSource_25268")
 sources/7 = SubResource("TileSetAtlasSource_vcolo")
 sources/8 = SubResource("TileSetAtlasSource_yn3mf")
+sources/9 = SubResource("TileSetAtlasSource_x1eh0")

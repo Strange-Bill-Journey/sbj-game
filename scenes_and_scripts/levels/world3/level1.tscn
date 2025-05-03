@@ -17,7 +17,7 @@ script = ExtResource("1_50gut")
 [node name="ColorRect" type="ColorRect" parent="ParallaxBackground"]
 offset_right = 328.0
 offset_bottom = 224.0
-color = Color(0, 0.533333, 1, 1)
+color = Color(0.866667, 0.533333, 0.333333, 1)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)

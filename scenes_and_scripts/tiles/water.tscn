@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxov2bd2qrog8"]
+
+[ext_resource type="SpriteFrames" uid="uid://b85rr461ocm6y" path="res://spriteframes/lava.tres" id="1_b0utc"]
+[ext_resource type="Script" uid="uid://cjm84k1aslgyr" path="res://scenes_and_scripts/tiles/lava.gd" id="2_0ossq"]
+
+[node name="lava" type="AnimatedSprite2D"]
+sprite_frames = ExtResource("1_b0utc")
+script = ExtResource("2_0ossq")
