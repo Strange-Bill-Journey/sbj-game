@@ -7,4 +7,4 @@ func _process(_delta):
 	if Input.is_action_just_pressed("ui_enter"):
 		get_tree().change_scene_to_file("res://scenes_and_scripts/levels/world1/level1.tscn")
 	if Input.is_action_just_pressed("ui_space"):
-		OS.shell_open("https://github.com/Strange-Bill-Journey/sbj-game/wiki/Credits")
+		OS.shell_open("https://github.com/Strange-Bill-Journey/sbj-game/blob/main/credits.md")
