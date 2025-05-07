@@ -7,10 +7,9 @@ func _ready() -> void:
 	get_tree().paused = false
 	$CircleUI.visible = true
 
-func _on_music_change_body_entered(body) -> void:
+func _on_scene_changer_body_entered(body) -> void:
 	if body.is_in_group("Player"):
 		print("why do i hear boss music?")
-		$MusicChange.set_deferred("monitoring", false)
-		$MusicChange.set_deferred("monitorable", false)
-		$levelmusic.stream = load("res://music/boss.ogg")
-		$levelmusic.play()
+		$SceneChanger.set_deferred("monitoring", false)
+		$SceneChanger.set_deferred("monitorable", false)
+		get_tree().call_deferred("change_scene_to_file", "res://scenes_and_scripts/levels/world1/level4b.tscn")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh7gl2las7reb"
-path="res://.godot/imported/grass.png-3a71023a1b5184458b8570f6b5241e97.ctex"
+uid="uid://ccg3707vpupuy"
+path="res://.godot/imported/gradient.png-846d31a419009ca9bcc6b899992d96c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/tiles/grass.png"
-dest_files=["res://.godot/imported/grass.png-3a71023a1b5184458b8570f6b5241e97.ctex"]
+source_file="res://images/tiles/gradient.png"
+dest_files=["res://.godot/imported/gradient.png-846d31a419009ca9bcc6b899992d96c7.ctex"]
 
 [params]
 

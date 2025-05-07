@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dh7gl2las7reb"
-path="res://.godot/imported/grass.png-3a71023a1b5184458b8570f6b5241e97.ctex"
+uid="uid://4y085xrppovl"
+path="res://.godot/imported/pillar.png-16106803ab37c414983016d51482d3ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/tiles/grass.png"
-dest_files=["res://.godot/imported/grass.png-3a71023a1b5184458b8570f6b5241e97.ctex"]
+source_file="res://images/tiles/pillar.png"
+dest_files=["res://.godot/imported/pillar.png-16106803ab37c414983016d51482d3ce.ctex"]
 
 [params]
 

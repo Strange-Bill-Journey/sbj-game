@@ -6,15 +6,15 @@ func _ready():
 	
 func move_up():
 	$".".play("up")
-	await get_tree().create_timer(0.05).timeout
+	await get_tree().create_timer(0.01).timeout
 	$".".play("default")
 	var tween = create_tween()
-	tween.tween_property(self, "position", position + Vector2(0, -50), 0.5)
+	tween.tween_property(self, "position", position + Vector2(0, -50), 0.5).set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_OUT)
 	tween.tween_callback(move_down)
 
 func move_down():
 	var tween = create_tween()
-	tween.tween_property(self, "position", position + Vector2(0, 50), 0.5)
+	tween.tween_property(self, "position", position + Vector2(0, 50), 0.5).set_trans(Tween.TRANS_CIRC).set_ease(Tween.EASE_IN)
 	tween.tween_callback(move_up)
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
