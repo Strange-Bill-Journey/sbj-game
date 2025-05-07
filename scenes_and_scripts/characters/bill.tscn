@@ -8,10 +8,13 @@
 size = Vector2(12, 14)
 
 [node name="Bill" type="CharacterBody2D"]
+floor_constant_speed = true
+floor_max_angle = 1.4591
+floor_snap_length = 10.1
 script = ExtResource("1_dtu6r")
 
 [node name="Image" type="AnimatedSprite2D" parent="."]
-position = Vector2(8, 4)
+position = Vector2(8, 8)
 sprite_frames = ExtResource("1_audlv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -20,8 +23,8 @@ shape = SubResource("RectangleShape2D_audlv")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
-limit_top = 0
-limit_bottom = 0
+limit_bottom = 200
+position_smoothing_enabled = true
 
 [node name="jump" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_mrw0v")

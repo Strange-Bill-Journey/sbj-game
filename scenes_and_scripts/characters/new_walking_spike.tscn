@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://my5oogxi4123"]
+
+[ext_resource type="Texture2D" uid="uid://qdk4io6ukh65" path="res://images/characters/enemies/spike.png" id="1_guxvf"]
+[ext_resource type="Script" uid="uid://dwsml6dp558ak" path="res://scenes_and_scripts/characters/new_walking_spike.gd" id="2_dldfj"]
+[ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="3_ca4lb"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_guxvf")
+offset = Vector2(0, 1)
+script = ExtResource("2_dldfj")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0.200001, -7.5)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2(-8.2, 1.5)
+polygon = PackedVector2Array(8, 0, 15, 14, 0.999999, 14)
+
+[node name="EndScreen" type="CanvasLayer" parent="."]
+process_mode = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="EndScreen"]
+offset_left = -6.0
+offset_top = -6.0
+offset_right = 330.0
+offset_bottom = 208.0
+color = Color(0, 0, 0, 1)
+
+[node name="fall" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ca4lb")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

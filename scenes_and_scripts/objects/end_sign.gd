@@ -8,6 +8,7 @@ func _ready() -> void:
 func _on_area_2d_body_entered(body) -> void:
 	if body.is_in_group("Player"):
 		get_tree().paused = true
+		$AudioStreamPlayer.play()
 		$EndScreen.visible = true
 		Global.level_finished = true
 		await get_tree().create_timer(3).timeout

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwey3cpgf8gij"]
+
+[ext_resource type="Script" uid="uid://bjcprr6ttwsoi" path="res://scenes_and_scripts/characters/bill.gd" id="1_rwi28"]
+[ext_resource type="SpriteFrames" uid="uid://diul7p86go153" path="res://spriteframes/bill.tres" id="2_dww3b"]
+[ext_resource type="AudioStream" uid="uid://ccis7qdhkgisy" path="res://sounds/jump.ogg" id="3_g0kqj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_audlv"]
+size = Vector2(12, 14)
+
+[node name="Bill" type="CharacterBody2D"]
+floor_constant_speed = true
+floor_max_angle = 1.4591
+floor_snap_length = 10.1
+script = ExtResource("1_rwi28")
+
+[node name="Image" type="AnimatedSprite2D" parent="."]
+position = Vector2(8, 8)
+sprite_frames = ExtResource("2_dww3b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8, 9)
+shape = SubResource("RectangleShape2D_audlv")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+limit_bottom = 200
+position_smoothing_enabled = true
+
+[node name="jump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g0kqj")

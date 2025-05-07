@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="4_n4h1b"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ljbau"]
-radius = 7.0
+radius = 6.5
 
 [node name="Bubble" type="AnimatedSprite2D"]
 scale = Vector2(2, 2)

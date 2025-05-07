@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://y2x1wm7nturv"]
+[gd_scene load_steps=5 format=3 uid="uid://y2x1wm7nturv"]
 
 [ext_resource type="SpriteFrames" uid="uid://ch1a44srgpgv" path="res://spriteframes/jumping_bubble.tres" id="1_ljbau"]
 [ext_resource type="Script" uid="uid://dadqxjg80cjab" path="res://scenes_and_scripts/characters/bubble.gd" id="2_vmvso"]
-[ext_resource type="FontFile" uid="uid://cw2p8c0m08kg6" path="res://fonts/C64_Pro-STYLE.otf" id="3_vmvso"]
 [ext_resource type="AudioStream" uid="uid://t45f68b6rstc" path="res://sounds/fall.ogg" id="4_6hgik"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ljbau"]
@@ -29,14 +28,6 @@ offset_top = -6.0
 offset_right = 330.0
 offset_bottom = 208.0
 color = Color(0, 0, 0, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="EndScreen"]
-offset_right = 320.0
-offset_bottom = 200.0
-theme_override_fonts/normal_font = ExtResource("3_vmvso")
-theme_override_font_sizes/normal_font_size = 16
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [node name="fall" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_6hgik")

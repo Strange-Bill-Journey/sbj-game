@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://7dp57qyjmugy"]
+[gd_scene load_steps=9 format=4 uid="uid://7dp57qyjmugy"]
 
-[ext_resource type="Script" uid="uid://dq1ugvwhrpnmj" path="res://scenes_and_scripts/levels/world1/level1.gd" id="1_mx2ye"]
-[ext_resource type="Texture2D" uid="uid://bknrveujxydp2" path="res://images/background/clouds.png" id="2_t5ylp"]
+[ext_resource type="Script" uid="uid://dq1ugvwhrpnmj" path="res://scenes_and_scripts/levels/level1.gd" id="1_mx2ye"]
+[ext_resource type="Texture2D" uid="uid://usn0v6iwnoew" path="res://images/background/grassland.png" id="2_31x0f"]
 [ext_resource type="TileSet" uid="uid://dm4mj0uoi2xjo" path="res://tilesets/interactive.tres" id="3_31x0f"]
 [ext_resource type="PackedScene" uid="uid://bwhij74px8aqb" path="res://scenes_and_scripts/characters/bill.tscn" id="4_bpehc"]
 [ext_resource type="AudioStream" uid="uid://c75lxtv347r52" path="res://music/grassland.ogg" id="5_lu4x6"]
 [ext_resource type="PackedScene" uid="uid://3kxmr6xlkxlo" path="res://scenes_and_scripts/objects/end_sign.tscn" id="6_yc43y"]
 [ext_resource type="PackedScene" uid="uid://cspgfyx7krr4p" path="res://scenes_and_scripts/circle_ui.tscn" id="7_t5ylp"]
+[ext_resource type="FontFile" uid="uid://cw2p8c0m08kg6" path="res://fonts/C64_Pro-STYLE.otf" id="10_lu4x6"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_mx2ye")
@@ -14,26 +15,28 @@ script = ExtResource("1_mx2ye")
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ColorRect" type="ColorRect" parent="ParallaxBackground"]
+offset_top = -160.0
 offset_right = 328.0
 offset_bottom = 224.0
-color = Color(0, 0.533333, 1, 1)
+color = Color(0.243137, 0.592157, 0.701961, 1)
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.5, 0.5)
-motion_mirroring = Vector2(440, 0)
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(416, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(224, 96)
-texture = ExtResource("2_t5ylp")
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(201, 96)
+texture = ExtResource("2_31x0f")
 
 [node name="TileMapLayerBackground" type="TileMapLayer" parent="."]
 tile_set = ExtResource("3_31x0f")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAD//wwACgAIAAMAAAD//wsACgAIAAIAAAD//woACgAIAAIAAAD//wkACgAIAAIAAAD//wgACgAIAAIAAAD//wcACgAIAAIAAAD//wYACgAIAAIAAAD//wUACgAIAAIAAAD//wQACgAIAAIAAAD//wMACgAIAAIAAAD//wIACgAIAAIAAAD//wEACgAIAAIAAAD//wAACgAIAAEAAAA=")
 tile_set = ExtResource("3_31x0f")
 
 [node name="Bill" parent="." instance=ExtResource("4_bpehc")]
-position = Vector2(16, 144)
+position = Vector2(16, 128)
 
 [node name="levelmusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_lu4x6")
@@ -45,3 +48,14 @@ autoplay = true
 position = Vector2(3464, 144)
 
 [node name="CircleUI" parent="." instance=ExtResource("7_t5ylp")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LevelName" type="Label" parent="CanvasLayer"]
+offset_top = 3.0
+offset_right = 320.0
+offset_bottom = 203.0
+theme_override_fonts/font = ExtResource("10_lu4x6")
+theme_override_font_sizes/font_size = 8
+text = "1-1"
+horizontal_alignment = 1
